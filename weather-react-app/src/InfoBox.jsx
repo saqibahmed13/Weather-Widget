@@ -20,7 +20,6 @@ export default function InfoBox({ info }) {
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {info.city}
-              
             </Typography>
             <Typography
               variant="body2"
