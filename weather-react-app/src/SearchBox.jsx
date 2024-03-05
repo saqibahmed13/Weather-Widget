@@ -4,7 +4,7 @@ import "./SearchBox.css";
 import { useState } from "react";
 
 export default function Search({ updateInfo }) {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(""); // searchbox City
   const [error, setError] = useState(false);
   const API_URL = "https://api.openweathermap.org/data/2.5/weather";
   const API_KEY = "ca46643c667d769c20e96dbeb1b1c644";
@@ -26,7 +26,7 @@ export default function Search({ updateInfo }) {
         feelsLiks: jsonKaResponse.main.feels_like,
         weather: jsonKaResponse.weather[0].description,
       };
-      console.log(result);
+      console.log( result);
       return result;
     } catch (err) {
       throw err;
@@ -44,6 +44,8 @@ export default function Search({ updateInfo }) {
       setCity("");
       let data = await getWeatherInfo();
       updateInfo(data);
+      console.log("yeh data", data);
+      console.log("yeh updatewala", updateInfo(data));
     } catch (err) {
       setError(true);
     }

@@ -1,4 +1,4 @@
-import WeatherApp from "./WeatherApp";
+import WeatherApp from "./WeatherApp.jsx";
 import SetProps from "./SetProps";
 function App() {
   return (
