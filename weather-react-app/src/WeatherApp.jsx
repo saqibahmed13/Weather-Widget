@@ -13,14 +13,14 @@ export default function WeatherApp() {
     weather: "haze",
   });
 
-  let updateInfo = (result) => {
+  let updateInfos = (result) => {
     setWeatherInfo(result);
   };
 
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>Weather App</h2>
-      <Search updateInfo = {updateInfo} />
+      <Search updateInfo = {updateInfos} />
       <InfoBox info = {weatherInfo} />
     </div>
   );

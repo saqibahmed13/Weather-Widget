@@ -1,10 +1,10 @@
-import { useState } from "react";
 import WeatherApp from "./WeatherApp";
+import SetProps from "./SetProps";
 function App() {
   return (
     <>
-     <WeatherApp/>
-     </>
+      <WeatherApp />
+    </>
   );
 }
 
