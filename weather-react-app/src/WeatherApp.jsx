@@ -13,15 +13,16 @@ export default function WeatherApp() {
     weather: "haze",
   });
 
-  let updateInfos = (result) => {
-    setWeatherInfo(result);
+  let updateInfos = (fetchedValue) => {
+    // fetched values have values which is passed to setWeatherInfo
+    setWeatherInfo(fetchedValue);
   };
 
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>Weather App</h2>
       <Search updateInfo={updateInfos} />
-      <InfoBox info = {weatherInfo} />
+      <InfoBox info={weatherInfo} />
     </div>
   );
 }

@@ -47,7 +47,7 @@ export default function Search({ updateInfo }) {
       console.log("yeh data", data);
       console.log("yeh updatewala", updateInfo(data));
     } catch (err) {
-      setError(true);
+      setError(true);  
     }
   };
 
