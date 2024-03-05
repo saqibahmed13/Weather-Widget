@@ -15,14 +15,17 @@ export default function WeatherApp() {
 
   let updateInfos = (fetchedValue) => {
     // fetched values have values which is passed to setWeatherInfo
+    console.log("koon ine", fetchedValue);
     setWeatherInfo(fetchedValue);
   };
 
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>Weather App</h2>
-      <Search updateInfo={updateInfos} />
-      <InfoBox info={weatherInfo} />
+      <Search updateInfo={updateInfos} />      {/* updateInfo ka updateInfo(result) ku as a setWeatherInfo(fetchedValue) karko print karrin so  */}
+      <InfoBox info={weatherInfo} />  
+      {/* Infobox is equal to weatherInfo */}
+      {/* info ki jagah jaako weatherinfo replace hojata so */}
     </div>
   );
 }
