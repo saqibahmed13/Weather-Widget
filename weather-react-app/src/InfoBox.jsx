@@ -10,9 +10,9 @@ export default function InfoBox({ info }) {
   return (
     <div className="infobox">
       <div className="cardContainer">
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ minWidth: 345 }}>
           <CardMedia
-            sx={{ height: 140 }}
+            sx={{ height: 200 }}
             image={IMG_URL}
             title="green iguana"
           />
