@@ -6,6 +6,8 @@ import "./InfoBox.css";
 
 export default function InfoBox({ info }) {
   const IMG_URL = "./src/assets/weather 2.jpg";
+  const HOT_URL = "./src/assets/hotWeather.jpg";
+  const COLD_URL = "./src/assets/mansoonWeather.jpg";
 
   return (
     <div className="infobox">
@@ -13,7 +15,7 @@ export default function InfoBox({ info }) {
         <Card sx={{ minWidth: 345 }}>
           <CardMedia
             sx={{ height: 200 }}
-            image={IMG_URL}
+            image={info.humidity>80? COLD_URL : info.temp>15 ?  HOT_URL : IMG_URL}
             title="green iguana"
           />
           <CardContent>
